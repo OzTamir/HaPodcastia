@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>הפודקסטיה</title>
+    <meta name="twitter:description" content="מאגר הפודקאסטים הישראלי">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta name="description" content="מאגר הפודקאסטים הישראלי">
+    <meta property="og:image" content="assets/img/hapodcastia_small.png">
+    <meta name="twitter:title" content="HaPodcastia">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- App Logic -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</head>
+
+<body ng-app="hapodcastia" dir="rtl">
+    <main class="page projects-page">
+        <section class="text-center portfolio-block projects-cards" style="padding-top: 60px;padding-bottom: 60px;text-align: center;">
+            <div class="container">
+                <div class="heading" style="margin-bottom: 30px;"><img style="text-align: center;width: 150px;" src="assets/img/podcast.png">
+                    <div style="text-align:center;">
+                        <h2 class="divider-style" style="font-size: 44px;margin-top: 20px;margin-bottom: 0px;"><span style="font-family: Alef, sans-serif;"><strong>הפודקסטיה</strong></span></h2>
+                    </div>
+                    <h2 style="font-family: Alef, sans-serif;font-size: 43px;"></h2>
+                </div>
+            </div>
+            <div class="container" ng-controller="PodcastiaController" align="center">
+                <div class="row" style="text-align: center;margin-bottom: 25px;width: 100%;">
+                    <div class="col-xl-12"><input class="border rounded search-bar" type="search" placeholder="חפש בפודקסטיה..."></div>
+                </div>
+                <div class="row card-row" ng-repeat="row in rows">
+                    <div class="col-md-6 col-lg-4" align="center" ng-repeat="podcast in row">
+                        <div class="card border-0" data-bs-hover-animate="pulse"><a href="{{podcast.url}}"><img class="card-img-top scale-on-hover" ng-src="{{podcast.image}}" alt="Card Image" style="width: 200px;"></a>
+                            <div class="card-body" style="border-width: 2px;">
+                                <h6><a href="#">{{podcast.name}}</a></h6>
+                                <p class="text-muted card-text">{{podcast.description}}<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="https://oztamir.com" style="font-size: 14px;color: rgba(77,83,88,0.64);">פותח ב-&nbsp;<i class="fa fa-heart"></i>&nbsp; על ידי עוז תמיר&nbsp;</a></div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
